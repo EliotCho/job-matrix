@@ -15,6 +15,40 @@
       <button type="submit" id="signup-btn">Signup!</button>
       <a href="/login">Login instead</a>
     </form>
+
+    <form class="pure-form pure-form-stacked">
+      <fieldset>
+        {{! Adds a line on top to divide form }}
+        {{! <legend>A Stacked Form</legend> }}
+        <label for="stacked-name">Username</label>
+        <input type="text" id="aligned-name" placeholder="Username" />
+        <span class="pure-form-message">This is a required field.</span>
+        <br />
+        <label for="stacked-email">Email</label>
+        <input type="email" id="stacked-email" placeholder="Email" />
+        <span class="pure-form-message">This is a required field.</span>
+        <br />
+        <label for="stacked-password">Password</label>
+        <input type="password" id="stacked-password" placeholder="Password" />
+
+        {{! Dropdown, not needed }}
+        {{! <label for="stacked-state">State</label>
+        <select id="stacked-state">
+          <option>AL</option>
+          <option>CA</option>
+          <option>IL</option>
+        </select> }}
+
+        {{! Remember me checkbox }}
+        {{! <label for="stacked-remember" class="pure-checkbox">
+          <input type="checkbox" id="stacked-remember" />
+          Remember me
+        </label> }}
+        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        <a href="/login">Login instead</a>
+      </fieldset>
+    </form>
+
   </div>
 </div>
 
