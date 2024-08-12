@@ -1,11 +1,4 @@
-<div>
-    {{!-- Reminder: examples comes from the data being passed in the res.render on homeRoutes.js! --}}
 
-  {{#each examples}}
-  {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
-    {{>items}}
-  {{/each}}
-</div>
 
 <div>
   <div>
@@ -18,5 +11,13 @@
     <button type="submit">Create</button>
   </form>
 </div>
+<div>
+    {{!-- Reminder: examples comes from the data being passed in the res.render on homeRoutes.js! --}}
 
+  {{#each examples}}
+  {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
+    {{>items}}
+  {{/each}}
+</div>
 <script src="/js/newData.js"></script>
+
