@@ -8,23 +8,23 @@
   </div>
 
   <!-- Handlebars template -->
-  <script id="job-template" type="text/x-handlebars-template">
-        {{#each results}}
-        <div class="job-listing">
-            <div class="job-title">{{title}}</div>
-            <div class="job-location">{{location.display_name}}</div>
-            <div class="job-salary">{{salary_min}} - {{salary_max}}</div>
-        </div>
-        {{/each}}
+
+  <div class="job">
+    {{#each results}}
+    <div class="job-listing">
+      <h2>{{title}}</h2>
+      <p>{{company}}</p>
+      <p>{{location}}</p>
+    </div>
+    {{/each}}
     </script>
 
-  <script>
-    // API routes
-    const apiId = 'process.env.API_ID';
-    const apiKey = 'process.env.API_KEY';
+    <script>
+      // API routes
+      const apiId = 'process.env.API_ID';
+      const apiKey = 'process.env.API_KEY';
 
-    // Fetch job data and update the job board
-    function fetchJobs() {
+      // Fetch job data and update the job board
       fetch(`https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${apiId}&app_key=${apiKey}`)
         .then(response => response.json())
         .then(data => {
@@ -33,14 +33,9 @@
           const template = Handlebars.compile(source);
 
           // Generate the HTML for the job listings
-          const html = template(data);
+          const html = template({ jobs: data });
           document.getElementById('job-listings').innerHTML = html;
         })
         .catch(error => console.error('Error fetching job data:', error));
-    }
-
-    // Fetch jobs when the page loads
-    window.onload = fetchJobs;
-  </script>
+    </script>
 </main>
-
