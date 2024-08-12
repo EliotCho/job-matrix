@@ -1,21 +1,35 @@
 /* any css stylesheets can go in this folder */
 /* hint- remember to import them in your handlebars! */
 #header {
-  background-color: lightblue;
+  background-color: #0008ff;
+  text-align: center;
+  border: #0008ff solid 5px;
+  color: white;
 }
+
 #footer {
-  background-color: lightcoral;
+  background-color: black;
+  text-align: center;
+  border: black solid 5px;
+  color: white;
 }
 #nav {
-  display: flex;
+  border-top: solid 10px #d3d3d35b;
+  border-bottom: #d3d3d35b 10px solid;
+  background-color: #d3d3d35b;
 }
 
 #nav > ul {
   display: flex;
   list-style-type: none;
-  align-items: center;
+  justify-content: space-around;
 }
 
 #nav > ul > li {
   margin: 0 10px;
+}
+
+#nav > ul > li > a {
+  color: white;
+  text-decoration: none;
 }

@@ -4,22 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {{! Reminder- Edit this for your project! }}
     <title>Job Matrix</title>
-     <!--Pure CSS for styling-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <!--Pure CSS for styling-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+      integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="stylesheet" href="/css/Jobs.css" />
   </head>
 
   <body>
     {{! Navbar }}
     <nav id="nav">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/pageOne">Page One</a></li>
+        <li class="pure-button pure-button-primary"><a href="/">Home</a></li>
+        <li class="pure-button pure-button-primary"><a href="/pageOne">Page One</a></li>
         {{#if loggedIn}}
-          <li><a href="#" id="logout">Logout</a></li>
+          <li class="pure-button pure-button-primary"><a
+              href="#"
+              id="logout"
+            >Logout</a></li>
+          <li class="pure-button pure-button-primary"><a
+              href=""
+              id="profile"
+            >Profile</a></li>
         {{else}}
-          <li><a href="/login">Login</a></li>
+          <li class="pure-button pure-button-primary"><a
+              href="/login"
+            >Login</a></li>
         {{/if}}
       </ul>
     </nav>
