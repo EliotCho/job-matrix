@@ -16,4 +16,3 @@ router.use("/exampleData", exampleDataRoutes);
 
 module.exports = router;
 
-

@@ -11,8 +11,11 @@
 </div>
 <div>
     {{!-- Reminder: examples comes from the data being passed in the res.render on homeRoutes.js! --}}
-
-  {{#each examples}}
+  <div class="job-board-container">
+    <h1>Developer Jobs</h1>
+    <div id="job-listings"></div>
+  </div>
+  {{#each results}}
   {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
     {{>items}}
   {{/each}}

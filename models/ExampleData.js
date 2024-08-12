@@ -16,7 +16,9 @@ ExampleData.init(
     },
     message: {
       type: DataTypes.STRING,
-      allowNull: false,
+    },
+    job_description: {
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,

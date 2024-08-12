@@ -1,41 +1,10 @@
-{{!-- Reminder- this is a partial! Handlebars will render this code for as many '{{#each examples}}' that exist! --}}
+{{!-- Reminder- this is a partial! Handlebars will render this code for as many '{{#each examples}}' that exist!
 {{!-- Partials are invoked in /views/ by using the syntax: {{> partial-file-name}} --}}
 
-<main>
-  <div class="job-board-container">
-    <h1>Developer Jobs</h1>
-    <div id="job-listings"></div>
-  </div>
 
-  <!-- Handlebars template -->
-
-  <div class="job">
-    {{#each results}}
-    <div class="job-listing">
-      <h2>{{title}}</h2>
-      <p>{{company}}</p>
-      <p>{{location}}</p>
-    </div>
-    {{/each}}
-    </script>
-
-    <script>
-      // API routes
-      const apiId = 'process.env.API_ID';
-      const apiKey = 'process.env.API_KEY';
-
-      // Fetch job data and update the job board
-      fetch(`https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=${apiId}&app_key=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-          // Compile the Handlebars template
-          const source = document.getElementById('job-template').innerHTML;
-          const template = Handlebars.compile(source);
-
-          // Generate the HTML for the job listings
-          const html = template({ jobs: data });
-          document.getElementById('job-listings').innerHTML = html;
-        })
-        .catch(error => console.error('Error fetching job data:', error));
-    </script>
-</main>
+        <div class="job-listing">
+            <h2 class="job-title">{{title}}</h2>
+            <p class="job-company">{{company}}</p>
+            <p class="job-location">{{location}}</p>
+            <p class="job-salary">{{salary_min}} - {{salary_max}}</p>
+        </div>
