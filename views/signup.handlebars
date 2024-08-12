@@ -3,7 +3,7 @@
     <h2>Sign Up</h2>
   </div>
   <div id="signup" role="tabpanel">
-    <form id="signup-form">
+    {{! <form id="signup-form">
       <div>
         <label for="username-input-signup">Username</label>
         <input type="text" id="username-input-signup" />
@@ -14,9 +14,9 @@
       </div>
       <button type="submit" id="signup-btn">Signup!</button>
       <a href="/login">Login instead</a>
-    </form>
+    </form> }}
 
-    <form class="pure-form pure-form-stacked" id="sign-up">
+    <form class="pure-form pure-form-stacked" id="signup-form">
       <fieldset>
         {{! Adds a line on top to divide form }}
         {{! <legend>A Stacked Form</legend> }}
@@ -44,7 +44,11 @@
           <input type="checkbox" id="stacked-remember" />
           Remember me
         </label> }}
-        <button type="submit" class="pure-button pure-button-primary">Sign in</button>
+        <button
+          type="submit"
+          class="pure-button pure-button-primary"
+          id="signup-btn"
+        >Sign up</button>
         <a href="/login">Login instead</a>
       </fieldset>
     </form>
