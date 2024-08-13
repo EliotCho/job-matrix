@@ -17,9 +17,6 @@ JobPostingData.init(
     message: {
       type: DataTypes.STRING,
     },
-    job_description: {
-      type: DataTypes.STRING,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -40,7 +37,7 @@ JobPostingData.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    job_description: {
       type: DataTypes.TEXT,
       allowNull: false,
     },

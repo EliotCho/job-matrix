@@ -2,7 +2,10 @@
   <div>
     <h2>Login</h2>
   </div>
-  {{!-- <form id="login-form">
+
+  {{!-- Below is what was commented out --}}
+   {{!-- <form id="login-form">
+
     <div>
       <label for="username-input-login">Username</label>
       <input type="text" id="username-input-login" />
@@ -13,23 +16,18 @@
     </div>
     <button type="submit" id="login-btn">Login!</button>
     <a type="button" href="/signup">Sign up instead</a>
-  </form> --}}
+
+  </form>  --}}
+{{!-- Above is what was commented out --}}
 
   <form class="pure-form pure-form-stacked" id="login-form">
     <fieldset>
-      <label for="stacked-name username-input-login">Username</label>
-      <input
-        type="text"
-        id="aligned-name username-input-login"
-        placeholder="Username"
-      />
+      <label for="stacked-name">Username</label>
+      <input type="text" id="username-input-login" placeholder="Username" />
       <br />
-      <label for="stacked-password password-input-login">Password</label>
-      <input
-        type="password"
-        id="stacked-password password-input-login"
-        placeholder="Password"
-      />
+      <label for="stacked-password">Password</label>
+      <input type="password" id="password-input-login" placeholder="Password" />
+
 
       <button
         type="submit"
@@ -39,6 +37,7 @@
       <a type="button" href="/signup">Sign up instead</a>
     </fieldset>
   </form>
+
 </div>
 
 <script src="/js/login.js"></script>
