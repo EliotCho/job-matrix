@@ -2,9 +2,9 @@
 {{!-- Partials are invoked in /views/ by using the syntax: {{> partial-file-name}} --}}
 
 
-        <div class="job-listing">
-            <h2 class="job-title">{{title}}</h2>
-            <p class="job-company">{{company}}</p>
-            <p class="job-location">{{location}}</p>
-            <p class="job-salary">{{salary_min}} - {{salary_max}}</p>
-        </div>
+<div class="job-listing">
+    <h2 class="job-title">Title: {{title}}</h2>
+    <p class="job-company">Company Name: {{company_display_name}}</p>
+    <p class="job-job_description">{{job_description}}</p>
+    <p class="job-salary">{{salary_min}} - {{salary_max}}</p>
+</div>

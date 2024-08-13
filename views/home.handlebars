@@ -15,7 +15,7 @@
     <h1>Developer Jobs</h1>
     <div id="job-listings"></div>
   </div>
-  {{#each results}}
+  {{#each jobData as |job| }}
   {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
     {{>items}}
   {{/each}}
