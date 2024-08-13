@@ -210,21 +210,21 @@ This project is licensed under the MIT license.
 
 [Mary Elenius](https://maryelenius.com/) - mary.panda.jackson@gmail.com
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[Eliot Cho](https://github.com/EliotCho) - contributor.one@email.com
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[Alondra Santana](https://github.com/Alondra1752) - contributor.one@email.com
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[Jose Muchati](https://github.com/Uwttn) - muchati@icloud.com
 
 Project Links:
 
-[Github Repository](https://github.com/404pandas/project-2-setup-guide)
+[Github Repository](https://github.com/EliotCho/job-matrix)
 
 <!-- TODO: add your deployment link here -->
 
 [Deployment- coming soon](https://google.com)
 
-<!-- ACKNOWLEDGMENTS -->
+<!-- ACKNOWLEDGMENTS --> 
 
 ## Acknowledgments
 
