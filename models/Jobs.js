@@ -4,9 +4,9 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class JobPostingData extends Model {}
+class Jobs extends Model {}
 
-JobPostingData.init(
+Jobs.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -20,11 +20,11 @@ JobPostingData.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "users",
         key: "id",
       },
     },
-    // Reminder- Add any new columns to the JobPostingData model here
+    // Reminder- Add any new columns to the Jobs model here
     category_label: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -74,10 +74,9 @@ JobPostingData.init(
   {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
     underscored: true,
-    modelName: "Jobs",
+    modelName: "jobs",
   }
 );
 
-module.exports = JobPostingData;
+module.exports = Jobs;
