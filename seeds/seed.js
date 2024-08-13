@@ -1,7 +1,7 @@
 const sequelize = require("../config/connection");
 
 // Reminder- import any models you want to seed here
-const { User, JobPosting } = require("../models");
+const { User, ExampleData } = require("../models");
 
 // Reminder- import any data you want to seed here
 const exampleData = require("./exampleData.json");
@@ -20,7 +20,7 @@ const seedDatabase = async () => {
   console.log("Users created");
 
   // bulkCreate example data
-  await JobPosting.bulkCreate(exampleData, {
+  await ExampleData.bulkCreate(exampleData, {
     individualHooks: true,
     returning: true,
   });
