@@ -1,26 +1,29 @@
 const router = require("express").Router();
 
 // import any models you plan to use for this data's routes here
-const { ExampleData } = require("../../models");
+const { Jobs } = require("../../models");
 
-// protects routes from non-logged in users
-const { apiGuard } = require("../../utils/authGuard");
-
-router.post("/", apiGuard, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const newExampleData = await ExampleData.create({
-      ...req.body,
+    const newJobs = await Jobs.create({
+      title: req.body.jobTitle,
+      company_display_name: req.body.companyName,
+      job_description: req.body.description,
+      salary_max: req.body.salaryMax,
+      salary_min: req.body.salaryMin,
+      remote: req.body.remote,
+
       user_id: req.session.user_id,
     });
-    res.json(newExampleData);
+    res.json(newJobs);
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.put("/:id", apiGuard, async (req, res) => {
+router.put("/:id", async (req, res) => {
   try {
-    const [updatedRows] = await ExampleData.update(req.body, {
+    const [updatedRows] = await Jobs.update(req.body, {
       where: {
         id: req.params.id,
       },
@@ -36,9 +39,9 @@ router.put("/:id", apiGuard, async (req, res) => {
   }
 });
 
-router.delete("/:id", apiGuard, async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    const [destroyedRows] = ExampleData.destroy({
+    const [destroyedRows] = Jobs.destroy({
       where: {
         id: req.params.id,
       },
