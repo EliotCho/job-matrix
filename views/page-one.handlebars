@@ -9,3 +9,26 @@
   {{/each}}
 </div> 
 <script src="/js/page-one.js"></script>
+
+<form id="MyJobPost">
+<label for="username">Username:</label>
+    <input type="text" id="username" name="name">
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    
+    <button type="submit">Submit</button>
+</form>
+
+<!-- Handlebars Template Script -->
+<script id="form-template" type="text/x-handlebars-template">
+    <form id="myJobPost">
+        <label for="username">Username:</label>
+        <input type="text" id="name" name="username">
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        
+        <button type="submit">Submit</button>
+    </form>
+</script>
