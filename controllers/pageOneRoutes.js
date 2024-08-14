@@ -1,14 +1,14 @@
 const router = require("express").Router();
 
 // import any models you plan to use for this page's routes here
-const { ExampleData } = require("../models");
+const { Jobs } = require("../models");
 
 // protects routes from unauthorized access
 const { withGuard } = require("../utils/authGuard");
 
 router.get("/", withGuard, async (req, res) => {
   try {
-    const databyUser = await ExampleData.findAll({
+    const databyUser = await Jobs.findAll({
       // Reminder- this is how you filter data by user_id
       where: {
         user_id: req.session.user_id,
