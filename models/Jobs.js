@@ -12,6 +12,7 @@ Jobs.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      allowNull: false,
     },
     message: {
       type: DataTypes.STRING,
@@ -39,6 +40,7 @@ Jobs.init(
     job_id: {
       type: DataTypes.STRING,
       primaryKey: true,
+      allowNull: true
     },
     latitude: {
       type: DataTypes.FLOAT,
