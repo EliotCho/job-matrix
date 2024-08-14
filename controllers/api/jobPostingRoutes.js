@@ -5,6 +5,8 @@ const { Jobs } = require("../../models");
 
 router.post("/", async (req, res) => {
   try {
+    console.log("************")
+console.log(req.body)
     const newJobs = await Jobs.create({
       title: req.body.jobTitle,
       company_display_name: req.body.companyName,
@@ -12,11 +14,12 @@ router.post("/", async (req, res) => {
       salary_max: req.body.salaryMax,
       salary_min: req.body.salaryMin,
       remote: req.body.remote,
-
-      user_id: req.session.user_id,
+      job_id:1,
+      users_id: req.session.user_id,
     });
     res.json(newJobs);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });

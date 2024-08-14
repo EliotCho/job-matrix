@@ -4,12 +4,12 @@ const Jobs = require("./Jobs");
 
 // Reminder- create any additional associations here
 Jobs.belongsTo(User, {
-  foreignKey: "user_id",
+  foreignKey: "users_id",
   onDelete: "CASCADE",
 });
 
 User.hasMany(Jobs, {
-  foreignKey: "user_id",
+  foreignKey: "users_id",
 });
 
 // export all models here

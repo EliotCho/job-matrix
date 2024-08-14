@@ -47,7 +47,7 @@ User.init(
     },
     sequelize,
     underscored: true,
-    modelName: "user",
+    modelName: "users",
   }
 );
 
