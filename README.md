@@ -214,7 +214,7 @@ This project is licensed under the MIT license.
 
 [Alondra Santana](https://github.com/Alondra1752) - contributor.one@email.com
 
-[Jose Muchati](https://github.com/Uwttn) - muchati@icloud.com
+[Jose Muchati](https://github.com/Uwttn)
 
 Project Links:
 
